@@ -1,11 +1,22 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<section class="default-container default-padding py-12 text-text">
+		<h1 class="text-2xl font-bold text-primary bulleted">About me</h1>
+		<p class="text-xl mt-10">Hello, I am <span class="font-bold">Roger Dalmacio</span>.</p>
+		<p class="mt-8">I am a full-stack <strong class="text-primary">Laravel developer</strong> with a passion for turning ideas into <strong class="text-primary">scalable web applications</strong>.</p>
+		<p class="mt-4">I have built solutions for both <strong class="text-primary">local</strong> businesses and <strong class="text-primary">international</strong> clients, helping them bring their vision to life on the web.</p>
+		<h2 class="text-xl mt-10 text-highlight">Background</h2>
+		<p class="mt-8 max-w-prose leading-relaxed">Since I was a kid, I’ve always been curious about web development. I used to wonder how websites worked, and the biggest mystery to me back then was how logins were implemented. I tried researching, studying, and experimenting, but no matter how hard I pushed, I couldn’t quite figure it out.</p>
+		<hr class="my-6 opacity-30">
+		<p class="mt-4 max-w-prose leading-relaxed">Fast forward to college — funny enough, I didn’t even plan to take BSIT. But life had its way, and once I remembered how much I loved web development, I knew I had to dive back in.</p>
+		<hr class="my-6 opacity-30">
+		<p class="mt-4 max-w-prose leading-relaxed">I started learning seriously through The Odin Project, where I fell in love with JavaScript and PHP. I built several projects — most of them messy at first, with no sense of conventions, architecture, or principles. But little by little, I figured things out.</p>
+		<hr class="my-6 opacity-30">
+		<p class="mt-4 max-w-prose leading-relaxed">By the time I graduated, I had already landed my first job as a developer — something I remain really proud of.</p>
+		<h2 class="text-xl mt-10 text-highlight">Career Progression</h2>
+		<p class="mt-8 max-w-prose leading-relaxed">Well, you got me—I haven’t finished it yet.</p>
+	</section>
 </Layout>

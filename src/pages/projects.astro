@@ -1,0 +1,97 @@
+---
+import Layout from "../layouts/Layout.astro";
+import marlboro from "../assets/projects/marlboro.png";
+import pro from "../assets/projects/44pro.png";
+import ceplace from "../assets/projects/ceplace.png";
+import frontline from "../assets/projects/fronlineceu.png";
+import mtap from "../assets/projects/mtap.png";
+import swa from "../assets/projects/swa.png";
+import noimage from "../assets/noimage.png";
+
+interface Project {
+    title: string,
+    description: string,
+    image: {},
+    url: string,
+}
+
+const projects : Project[] = [
+    {
+        title: 'Marlboro PH',
+        description: 'Marlboro.ph was actually the very first project I got to work on in my career',
+        image: marlboro,
+        url: 'https://marlboro.ph/'
+    },
+    {
+        title: '44pro',
+        description: 'This was the first project I worked on after transitioning into freelancing. It challenged me in ways I didn’t expect—everything was so unfamiliar—but it brought out the best in me and taught me how to adapt.',
+        image: pro,
+        url: 'https://44pro.com/'
+    },
+    {
+        title: 'Ce Place',
+        description: 'I helped develop The CE Place, an online platform that provides CEU courses for healthcare professionals to keep their licenses active and skills up to date.',
+        image: ceplace,
+        url: 'https://theceplace.com/'
+    },
+    {
+        title: 'Frontline Ceu',
+        description: 'I helped develop Frontline CEU Place, an online platform that makes it easy and affordable for respiratory therapists to earn accredited CEUs and download certificates instantly.',
+        image: frontline,
+        url: 'https://frontlineceuplace.com/'
+    },
+    {
+        title: 'Mtap',
+        description: 'I helped develop MTAP Systems, a digital tool (Multidimensional Task Ability Profile) that assesses physical function and daily activity limitations. It’s designed to be highly reliable, user-friendly, and helps clinicians identify treatment needs and track patient progress.',
+        image: mtap,
+        url: 'https://mtapsystems.com/'
+    },
+    {
+        title: 'Southwest Antennas',
+        description: 'I was one of the pioneer developers at Southwest Antennas, helping build solutions that support their line of rugged, high-performance RF and microwave antennas used in mission-critical industries like defense, aerospace, and law enforcement.',
+        image: swa,
+        url: 'https://southwestantennas.com/'
+    },
+    {
+        title: 'LTFRB - QMS',
+        description: 'This was my first project with LTFRB, and it was also the first time I got to apply some of the things I had learned in Laravel beforehand—like WebSockets, caching, and query optimizations.',
+        image: '',
+        url: ''
+    },
+    {
+        title: 'LTFRB - DCAP',
+        description: 'I was part of LTFRB’s DCAP (Drivers’ and Conductors’ Academy Program) system.',
+        image: '',
+        url: ''
+    },
+];
+---
+<Layout>
+    <section class="default-container default-padding py-12 text-text">
+        <h2 class="text-lg text-highlight">Tech stack</h2>
+        <p class="mt-2">Frontend: <strong>Vue JS</strong>, <strong>Nuxt JS</strong>, <strong>Javascript</strong>, <strong>Typescript</strong>, and <strong>Tailwind</strong>.</p>
+        <p>Backend: <strong>PHP</strong>, <strong>Laravel</strong>.</p>
+        <p>Databases: <strong>Mysql</strong> and <strong>sqlite</strong>.</p>
+        <p>Others: <strong>Inertia JS</strong>, <strong>GSAP</strong> and <strong>Astro JS</strong>.</p>
+        <h1 class="text-2xl font-bold text-primary mt-10 bulleted">Projects</h1>
+        <p class="text-xl mt-10">These are some of the projects I’ve had the chance to build and be part of.</p>
+        <ul class="list-disc mt-10 flex flex-col gap-10 marker:text-highlight">
+            {projects.map(project => (
+                <li>
+                    {project.url
+                        ?
+                        <a href={project.url ?? null} target="_blank" class="hover:underline decoration-highlight">
+                            <span class="text-xl text-highlight">{project.title}</span>
+                        </a>
+                        :
+                        <span class="text-xl">{project.title}</span>
+                    }
+                    <div class="rounded-lg overflow-hidden w-full max-w-xl mt-4">
+                        <img class={project.url ? '' : 'w-24'} src={project.image.src ?? noimage.src} alt={project.title} />
+                    </div>
+                    <p class="max-w-prose mt-4 indent-8">{project.description}</p>
+                </li>
+            ))}
+        </ul>
+    </section>
+</Layout>

@@ -1,0 +1,25 @@
+---
+import github from '../assets/github.png'
+const { pathname } = Astro.url;
+---
+
+<ul class="flex flex-col md:flex-row md:items-center gap-1 md:gap-8 py-6 px-4 md:px-0 md:py-0">
+    <li>
+        <a href="/" class={pathname === '/' ? 'text-primary' : 'hover:text-primary'}>Home</a>
+    </li>
+    <li>
+        <a href="/projects" class={pathname === '/projects' ? 'text-primary' : 'hover:text-primary'}>Projects</a>
+    </li>
+    <li>
+        <a href="/personal-projects" class={pathname === '/personal-projects' ? 'text-primary' : 'hover:text-primary'}>Personal Projects</a>
+    </li>
+    <li>
+        <a href="/contacts" class={pathname === '/contacts' ? 'text-primary' : 'hover:text-primary'}>Contacts</a>
+    </li>
+    <li class="rounded md:hover:bg-gray-200/50 w-fit">
+        <a href="https://github.com/rogerdalmacio" target="_blank" class="flex items-center gap-1.5 w-full h-full md:px-3 md:py-0.5">
+            <img src={github.src} class="w-4" alt="github icon" />
+            <span class="md:text-sm">Github</span>
+        </a>
+    </li>
+</ul>
