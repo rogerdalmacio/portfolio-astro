@@ -8,13 +8,13 @@ const { pathname } = Astro.url;
         <a href="/" class={pathname === '/' ? 'text-primary' : 'hover:text-primary'}>Home</a>
     </li>
     <li>
-        <a href="/projects" class={pathname === '/projects' ? 'text-primary' : 'hover:text-primary'}>Projects</a>
+        <a href="/projects" class={pathname.startsWith('/projects') ? 'text-primary' : 'hover:text-primary'}>Projects</a>
     </li>
     <li>
-        <a href="/personal-projects" class={pathname === '/personal-projects' ? 'text-primary' : 'hover:text-primary'}>Personal Projects</a>
+        <a href="/personal-projects" class={pathname.startsWith('/personal-projects') ? 'text-primary' : 'hover:text-primary'}>Personal Projects</a>
     </li>
     <li>
-        <a href="/contacts" class={pathname === '/contacts' ? 'text-primary' : 'hover:text-primary'}>Contacts</a>
+        <a href="/contacts" class={pathname.startsWith('/contacts') ? 'text-primary' : 'hover:text-primary'}>Contacts</a>
     </li>
     <li class="rounded md:hover:bg-gray-200/50 w-fit">
         <a href="https://github.com/rogerdalmacio" target="_blank" class="flex items-center gap-1.5 w-full h-full md:px-3 md:py-0.5">
