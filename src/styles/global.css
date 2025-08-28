@@ -2,11 +2,39 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+    font-family: 'Anonymous Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/AnonymousPro-Regular.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Anonymous Pro';
+    font-style: italic;
+    font-weight: 700;
+    src: url('/fonts/AnonymousPro-BoldItalic.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Anonymous Pro';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/AnonymousPro-Bold.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Anonymous Pro';
+    font-style: italic;
+    font-weight: 400;
+    src: url('/fonts/AnonymousPro-Italic.ttf') format('truetype'),
+}
+
 @theme {
     --font-pro: "Anonymous Pro", monospace;
     --color-text: #4A4A4A;
     --color-primary: #2E2E2E;
-    --color-highlight: #0EA5E9;
+    --color-highlight: #0b76b0;
 }
 
 .default-container {
