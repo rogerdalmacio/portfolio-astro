@@ -86,7 +86,7 @@ const projects : Project[] = [
                         :
                         <span class="text-xl">{project.title}</span>
                     }
-                    <div class="rounded-lg overflow-hidden w-full max-w-xl mt-4">
+                    <div class="rounded-lg overflow-hidden w-fit max-w-xl mt-4 border">
                         <img class={project.url ? '' : 'w-24'} src={project.image.src ?? noimage.src} alt={project.title} />
                     </div>
                     <p class="max-w-prose mt-4 indent-8">{project.description}</p>

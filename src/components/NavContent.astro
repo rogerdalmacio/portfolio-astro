@@ -16,7 +16,7 @@ const { pathname } = Astro.url;
     <li>
         <a href="/contacts" class={pathname.startsWith('/contacts') ? 'text-primary' : 'hover:text-primary'}>Contacts</a>
     </li>
-    <li class="rounded md:hover:bg-gray-200/50 w-fit">
+    <li class="rounded md:hover:bg-gray-200/50">
         <a href="https://github.com/rogerdalmacio" target="_blank" class="flex items-center gap-1.5 w-full h-full md:px-3 md:py-0.5">
             <img src={github.src} class="w-4" alt="github icon" />
             <span class="md:text-sm">Github</span>
