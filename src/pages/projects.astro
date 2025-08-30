@@ -7,6 +7,7 @@ import frontline from "../assets/projects/fronlineceu.png";
 import mtap from "../assets/projects/mtap.png";
 import swa from "../assets/projects/swa.png";
 import noimage from "../assets/noimage.png";
+import { Image } from 'astro:assets';
 
 interface Project {
     title: string,
@@ -55,13 +56,13 @@ const projects : Project[] = [
     {
         title: 'LTFRB - QMS',
         description: 'This was my first project with LTFRB, and it was also the first time I got to apply some of the things I had learned in Laravel beforehand—like WebSockets, caching, and query optimizations.',
-        image: '',
+        image: noimage,
         url: ''
     },
     {
         title: 'LTFRB - DCAP',
         description: 'I was part of LTFRB’s DCAP (Drivers’ and Conductors’ Academy Program) system.',
-        image: '',
+        image: noimage,
         url: ''
     },
 ];
@@ -87,7 +88,8 @@ const projects : Project[] = [
                         <span class="text-xl">{project.title}</span>
                     }
                     <div class="rounded-lg overflow-hidden w-fit max-w-xl mt-4 border">
-                        <img class={project.url ? '' : 'w-24'} src={project.image.src ?? noimage.src} alt={project.title} />
+                        <Image class={project.url ? '' : 'w-24'} src={project.image} alt={project.title} />
+                        <!--<img class={project.url ? '' : 'w-24'} src={project.image.src ?? noimage.src} alt={project.title} />-->
                     </div>
                     <p class="max-w-prose mt-4 indent-8">{project.description}</p>
                 </li>
