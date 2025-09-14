@@ -13,28 +13,37 @@
     font-family: 'Anonymous Pro';
     font-style: italic;
     font-weight: 700;
-    src: url('/fonts/AnonymousPro-BoldItalic.ttf') format('truetype'),
+    src: url('/fonts/AnonymousPro-BoldItalic.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Anonymous Pro';
     font-style: normal;
     font-weight: 700;
-    src: url('/fonts/AnonymousPro-Bold.ttf') format('truetype'),
+    src: url('/fonts/AnonymousPro-Bold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Anonymous Pro';
     font-style: italic;
     font-weight: 400;
-    src: url('/fonts/AnonymousPro-Italic.ttf') format('truetype'),
+    src: url('/fonts/AnonymousPro-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Rubik Distressed";
+    font-weight: 400;
+    font-style: normal;
+    src: url('/fonts/RubikDistressed-Regular.ttf') format('truetype');
 }
 
 @theme {
     --font-pro: "Anonymous Pro", monospace;
+    --font-rubik: "Rubik Distressed", system-ui;
     --color-text: #4A4A4A;
     --color-primary: #2E2E2E;
     --color-highlight: #0b76b0;
+    --color-off-white: #f8f7f3;
 }
 
 .default-container {

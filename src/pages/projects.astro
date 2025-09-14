@@ -69,27 +69,26 @@ const projects : Project[] = [
 ---
 <Layout>
     <section class="default-container default-padding py-12 text-text">
-        <h2 class="text-lg text-highlight">Tech stack</h2>
+        <h2 class="text-2xl font-rubik text-gray-700">Tech stack</h2>
         <p class="mt-2">Frontend: <strong>Vue JS</strong>, <strong>Nuxt JS</strong>, <strong>Javascript</strong>, <strong>Typescript</strong>, and <strong>Tailwind</strong>.</p>
         <p>Backend: <strong>PHP</strong>, <strong>Laravel</strong>.</p>
         <p>Databases: <strong>Mysql</strong> and <strong>sqlite</strong>.</p>
         <p>Others: <strong>Inertia JS</strong>, <strong>GSAP</strong> and <strong>Astro JS</strong>.</p>
-        <h1 class="text-2xl font-bold text-primary mt-10 bulleted">Projects</h1>
+        <h1 class="mt-10 text-4xl font-rubik text-primary">Projects</h1>
         <p class="text-xl mt-10">These are some of the projects I’ve had the chance to build and be part of.</p>
-        <ul class="list-disc mt-10 flex flex-col gap-10 marker:text-highlight">
+        <ul class="mt-10 flex flex-col gap-20 marker:text-highlight">
             {projects.map(project => (
-                <li>
+                <li class="group">
                     {project.url
                         ?
-                        <a href={project.url ?? null} target="_blank" class="hover:underline decoration-highlight">
-                            <span class="text-xl text-highlight">{project.title}</span>
+                        <a href={project.url ?? null} target="_blank">
+                            <span class="text-sm font-rubik tracking-widest p-3 text-off-white bg-[url(/brush.svg)] bg-center bg-cover bg-no-repeat">{project.title}</span>
                         </a>
                         :
-                        <span class="text-xl">{project.title}</span>
+                        <span class="text-sm font-rubik tracking-widest p-3 text-off-white bg-[url(/brush.svg)] bg-center bg-cover bg-no-repeat">{project.title}</span>
                     }
-                    <div class="rounded-lg overflow-hidden w-fit max-w-xl mt-4 border">
+                    <div class="rounded-lg overflow-hidden w-fit max-w-xl mt-6 border">
                         <Image class={project.url ? '' : 'w-24'} src={project.image} alt={project.title} />
-                        <!--<img class={project.url ? '' : 'w-24'} src={project.image.src ?? noimage.src} alt={project.title} />-->
                     </div>
                     <p class="max-w-prose mt-4 indent-8">{project.description}</p>
                 </li>

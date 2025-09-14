@@ -1,14 +1,48 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+interface Career {
+	title: string,
+	company: string,
+	date: string,
+}
+
+const careerProgression: Career[] = [
+	{
+		title: "Computer Programmer I",
+		company: "Land Transportation Franchising and Regulatory Board",
+		date: "February 2025 - Present"
+	},
+	{
+		title: "Freelance Web Developer",
+		company: "Upwork",
+		date: "November 2023 - September 2024"
+	},
+	{
+		title: "Freelance Laravel Fullstack Developer",
+		company: "Gaslamp Media",
+		date: "October 2023 - September 2024"
+	},
+	{
+		title: "PHP Developer (Laravel)",
+		company: "CoreProc, Inc.",
+		date: "June 2023 - October 2023"
+	},
+	{
+		title: "Web Development Intern",
+		company: "ITEXMO SMS Services Inc.",
+		date: "March 2023 - May 2023"
+	}
+];
 ---
 
 <Layout>
 	<section class="default-container default-padding py-12 text-text">
-		<h1 class="text-2xl font-bold text-primary bulleted">About me</h1>
+		<h1 class="text-4xl font-rubik text-primary">About me</h1>
 		<p class="text-xl mt-10">Hello, I am <span class="font-bold">Roger Dalmacio</span>.</p>
 		<p class="mt-8">I am a full-stack <strong class="text-primary">Laravel developer</strong> with a passion for turning ideas into <strong class="text-primary">scalable web applications</strong>.</p>
 		<p class="mt-4">I have built solutions for both <strong class="text-primary">local</strong> businesses and <strong class="text-primary">international</strong> clients, helping them bring their vision to life on the web.</p>
-		<h2 class="text-xl mt-10 text-highlight">Background</h2>
+		<h2 class="text-2xl mt-10 font-rubik text-gray-700">Background</h2>
 		<p class="mt-8 max-w-prose leading-relaxed">Since I was a kid, I’ve always been curious about web development. I used to wonder how websites worked, and the biggest mystery to me back then was how logins were implemented. I tried researching, studying, and experimenting, but no matter how hard I pushed, I couldn’t quite figure it out.</p>
 		<hr class="my-6 opacity-30">
 		<p class="mt-4 max-w-prose leading-relaxed">Fast forward to college — funny enough, I didn’t even plan to take BSIT. But life had its way, and once I remembered how much I loved web development, I knew I had to dive back in.</p>
@@ -16,39 +50,17 @@ import Layout from '../layouts/Layout.astro';
 		<p class="mt-4 max-w-prose leading-relaxed">I started learning seriously through The Odin Project, where I fell in love with JavaScript and PHP. I built several projects — most of them messy at first, with no sense of conventions, architecture, or principles. But little by little, I figured things out.</p>
 		<hr class="my-6 opacity-30">
 		<p class="mt-4 max-w-prose leading-relaxed">By the time I graduated, I had already landed my first job as a developer — something I remain really proud of.</p>
-		<h2 class="text-xl mt-10 text-highlight">Career Progression</h2>
+		<h2 class="text-2xl mt-10 font-rubik text-gray-700">Career Progression</h2>
 		<div class="relative mt-8">
-			<ul class="list-image-[url('/bullet.svg')] space-y-8">
-				<li>
-					<strong>Computer Programmer I</strong>
-					<p>Land Transportation Franchising and Regulatory Board</p>
-					<p>February 2025 - Present</p>
-				</li>
-				<li>
-					<div>
-						<strong>Freelance Web Developer</strong>
-						<p>Upwork</p>
-						<p>November 2023 - September 2024</p>
-					</div>
-					<div class="mt-2">
-						<strong>Freelance Laravel Fullstack Developer</strong>
-						<p>Gaslamp Media</p>
-						<p>October 2023 - September 2024</p>
-					</div>
-				</li>
-				<li>
-					<strong>PHP Developer (Laravel)</strong>
-					<p>CoreProc, Inc.</p>
-					<p>June 2023 - October 2023</p>
-				</li>
-				<li>
-					<strong>Web Development Intern</strong>
-					<p>ITEXMO SMS Services Inc.</p>
-					<p>March 2023 - May 2023</p>
-				</li>
+			<ul class="space-y-8">
+				{careerProgression.map(career => (
+					<li>
+						<p class="text-sm font-rubik tracking-widest p-3 text-off-white bg-[url(/brush.svg)] bg-cover w-fit bg-no-repeat">{ career.title }</p>
+						<p>{ career.company }</p>
+						<p>{ career.date }</p>
+					</li>
+				))}
 			</ul>
-
-			<span class="absolute h-98 w-[1px] top-2.5 -left-[9px] bg-text -z-1"></span>
 		</div>
 	</section>
 </Layout>

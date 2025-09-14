@@ -1,13 +1,13 @@
 ---
 import NavContent from "./NavContent.astro";
 ---
-<div class="bg-gray-50 sticky top-0 md:static text-text/80">
-    <nav class="hidden md:flex default-container default-padding py-5 md:py-10 border-b">
+<div class="sticky top-0 md:static text-text/80 border-b border-gray-300">
+    <nav class="hidden md:flex default-container default-padding py-5 md:py-10">
         <NavContent />
     </nav>
     <div class="md:hidden">
-        <div class="default-container default-padding py-4 border-b relative flex justify-between items-center">
-            <p>Roger Dalmacio</p>
+        <div class="default-container default-padding py-4 relative flex justify-between items-center">
+            <p class="font-rubik tracking-widest p-3 text-off-white bg-[url(/brush.svg)] bg-center bg-cover bg-no-repeat">Roger Dalmacio</p>
             <button
                 id="menu-btn"
                 aria-label="open-menu"
@@ -19,7 +19,7 @@ import NavContent from "./NavContent.astro";
                 <span class="w-5 h-[1.5px] bg-text/80"></span>
             </button>
         </div>
-        <nav id="mobile-menu" style="height: 0" class="bg-white border-b border-gray-100 w-full bg-gray-500 overflow-hidden transition-all duration-300">
+        <nav id="mobile-menu" style="height: 0" class="w-full overflow-hidden transition-all duration-300">
             <NavContent />
         </nav>
     </div>
