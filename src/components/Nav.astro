@@ -1,13 +1,16 @@
 ---
 import NavContent from "./NavContent.astro";
 ---
-<div class="sticky top-0 md:static text-text/80 border-b border-gray-300">
+<div class="sticky top-0 md:static text-text/80 border-b border-primary/30">
     <nav class="hidden md:flex default-container default-padding py-5 md:py-10">
+        <img class="w-5 mr-8" src="/r.png" alt="r-logo" />
         <NavContent />
     </nav>
     <div class="md:hidden">
         <div class="default-container default-padding py-4 relative flex justify-between items-center">
-            <p class="font-rubik tracking-widest p-3 text-off-white bg-[url(/brush.svg)] bg-center bg-cover bg-no-repeat">Roger Dalmacio</p>
+            <a href="/" aria-label="logo">
+                <img class="w-5" src="/r.png" alt="r-logo" />
+            </a>
             <button
                 id="menu-btn"
                 aria-label="open-menu"
